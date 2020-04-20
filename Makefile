@@ -2,7 +2,7 @@
 # Makefile to compile and link stk500boot bootloader
 # Author: Peter Fleury
 # File:   $Id: Makefile,v 1.3 2006/03/04 19:26:17 peter Exp $
-# based on WinAVR Makefile Template written by Eric B. Weddington, Jörg Wunsch, et al.
+# based on WinAVR Makefile Template written by Eric B. Weddington, Jï¿½rg Wunsch, et al.
 #
 # Adjust F_CPU below to the clock frequency in Mhz of your AVR target
 # Adjust BOOTLOADER_ADDRESS to your AVR target
@@ -124,7 +124,7 @@ CINCS =
 CFLAGS = -g$(DEBUG)
 CFLAGS += $(CDEFS) $(CINCS)
 CFLAGS += -O$(OPT)
-CFLAGS += -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -mno-tablejump
+CFLAGS += -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -fno-jump-tables 
 CFLAGS += -Wall -Wstrict-prototypes
 CFLAGS += -Wa,-adhlns=$(<:.c=.lst)
 CFLAGS += $(patsubst %,-I%,$(EXTRAINCDIRS))
